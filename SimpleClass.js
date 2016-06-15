@@ -1,4 +1,6 @@
 import {MyBase} from "MyBase";
+import {compute, val2} from "SomeOtherModule";
+
 export class SimpleClass extends MyBase {
 	constructor() {
 		super();
@@ -10,6 +12,17 @@ export class SimpleClass extends MyBase {
 	}
 
 	calculate() {
-		return 42;
+		return compute();
 	}
+
+	startEngine() {
+		var promise = new Promise(function(resolve, reject) {
+			setTimeout(function() {
+				resolve("Success using promises!");
+			}, 1000);
+		});
+
+		return promise;
+	}
+
 }
