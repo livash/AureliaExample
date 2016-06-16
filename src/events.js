@@ -4,6 +4,7 @@ import {DataRepository} from 'services/dataRepository';
 @inject(DataRepository)
 export class Events {
     constructor(dataRepository) {
-        dataRepository.getEvents().then(results => this.events = results);
+        this.events = dataRepository.getEvents
+                    .then(results => this.events = results);
     }
 }
