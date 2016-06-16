@@ -1,3 +1,4 @@
+import 'bootstrap';
 import {LogManager} from 'aurelia-framework';
 import {ConsoleAppender} from 'aurelia-logging-console';
 
@@ -6,5 +7,5 @@ LogManager.setLevel(LogManager.logLevel.debug);
 
 export function configure(aurelia) {
     aurelia.use.standardConfiguration();
-    aurelia.start().then(app => app.setRoot());
+    aurelia.start().then(app => app.setRoot('shell'));
 }
