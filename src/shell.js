@@ -28,5 +28,6 @@ export class Shell {
                 name: 'eventDetail'
             }
         ]);
+        this.image = "http://aurelia.io/images/aurelia-logo.png"
     }
 }
