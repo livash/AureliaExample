@@ -1,8 +1,11 @@
+import toastr from 'toastr';
+
 export class Shell {
     constructor() {}
     configureRouter(config, router) {
         this.router = router;
         config.title = "Olena's App";
+        config.addPipelineStep('modelbind', ToastNavResult);
         //config.options.pushState = true;
         config.map([
             {
@@ -30,5 +33,14 @@ export class Shell {
             }
         ]);
         this.image = "http://aurelia.io/images/aurelia-logo.png"
+    }
+}
+
+class ToastNavResult {
+    run(navInstruction, next) {
+        return next().then(result => {
+            toastr.info(result.status); // extract status message from the navigation result data and pass it to toastr
+            return result;
+        });
     }
 }
