@@ -6,25 +6,53 @@ export class Shell {
         config.map([
             {
                 route: ['', 'events'],
-                moduleId: 'events/events',
+                viewPorts: {
+                    mainContent: {
+                        moduleId: 'events/events'
+                    },
+                    sideBar: {
+                        moduleId: 'sideBar/sponsors'
+                    }
+                },
                 name: 'Events',
                 title: 'Events',
                 nav: true}, // default route
             {
                 route: 'jobs',
-                moduleId: 'jobs/jobs',
+                viewPorts: {
+                    mainContent: {
+                        moduleId: 'jobs/jobs'
+                    },
+                    sideBar: {
+                        moduleId: 'sideBar/adds'
+                    }
+                },
                 title: 'Jobs',
                 nav: true
             },
             {
                 route: 'discussion',
-                moduleId: 'discussion/discussion',
+                viewPorts: {
+                    mainContent: {
+                        moduleId: 'discussion/discussion'
+                    },
+                    sideBar: {
+                        moduleId: 'sideBar/adds'
+                    }
+                },
                 title: 'Discussion',
                 nav: true
             },
             {
                 route: 'eventDetail/:eventId',
-                moduleId: 'events/eventDetail',
+                viewPorts: {
+                    mainContent: {
+                        moduleId: 'events/eventDetail'
+                    },
+                    sideBar: {
+                        moduleId: 'sideBar/sponsors'
+                    }
+                },
                 name: 'eventDetail'
             }
         ]);
