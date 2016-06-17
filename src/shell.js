@@ -3,6 +3,7 @@ export class Shell {
     configureRouter(config, router) {
         this.router = router;
         config.title = "Olena's App";
+        //config.options.pushState = true;
         config.map([
             {
                 route: ['', 'events'],
