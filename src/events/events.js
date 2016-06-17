@@ -6,7 +6,12 @@ import {DataRepository} from 'services/dataRepository';
 export class Events {
     constructor(dataRepository, router) {
         this.router = router;
-        dataRepository.getEvents().then(results => {
+        this.dataRepository = dataRepository;
+
+    }
+
+    activate(params) {
+        this.dataRepository.getEvents().then(results => {
             this.events = results;
             this.events.forEach(item => {
                 item.detailUrl = this.router.generate('eventDetail', {eventId: item.id});
