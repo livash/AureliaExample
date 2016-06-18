@@ -30,6 +30,12 @@ export class Shell {
                 route: 'eventDetail/:eventId',
                 moduleId: 'events/eventDetail',
                 name: 'eventDetail'
+            },
+            {
+                route: 'addJob',
+                moduleId: 'jobs/addJob',
+                name: 'addJob',
+                nav: true
             }
         ]);
         this.image = "http://aurelia.io/images/aurelia-logo.png"
