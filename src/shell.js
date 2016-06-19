@@ -5,7 +5,7 @@ export class Shell {
     configureRouter(config, router) {
         this.router = router;
         config.title = "Olena's App";
-        config.addPipelineStep('modelbind', ToastNavResult);
+        //config.addPipelineStep('modelbind', ToastNavResult);
         //config.options.pushState = true;
         config.map([
             {
