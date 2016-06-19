@@ -1,5 +1,6 @@
 export class Colors {
     constructor() {
+        this.description = "Guess what color this is. Click on any color tile and find out it's name."
         this.colors = [
             'red',
             'green',
@@ -9,7 +10,7 @@ export class Colors {
     }
 
     onColorClick(colorIdx) {
-        let $el = $(`.color-card-${colorIdx}`);
-        $el.toggleClass('color-text-hide');
+        let className = `.color-card-${colorIdx}`;
+        $(className).toggleClass('color-text-hide');
     }
 }

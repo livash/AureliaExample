@@ -1,7 +1,12 @@
 <template>
     <div class="row">
+        <h5>${description}</h5>
+    </div>
+    <div class="row">
         <div repeat.for="color of colors">
-            <div class="well color-card color-card-${$index} color-text-hide color-text" css="background: ${color}" click.delegate="onColorClick($index)">
+            <div class="well color-card color-card-${$index} color-text-hide color-text"
+            css="background: ${color}"
+            click.delegate="onColorClick($index)">
                <span>${color}</span>
             </div>
         </div>

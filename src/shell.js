@@ -27,6 +27,13 @@ export class Shell {
                 nav: true
             },
             {
+                route: 'colors',
+                moduleId: 'colors/colors',
+                title: 'Colors',
+                name: 'colors',
+                nav: true
+            },
+            {
                 route: 'eventDetail/:eventId',
                 moduleId: 'events/eventDetail',
                 name: 'eventDetail'
@@ -35,12 +42,6 @@ export class Shell {
                 route: 'addJob',
                 moduleId: 'jobs/addJob',
                 name: 'addJob',
-                nav: true
-            },
-            {
-                route: 'colors',
-                moduleId: 'colors/colors',
-                name: 'colors',
                 nav: true
             }
         ]);
