@@ -36,6 +36,12 @@ export class Shell {
                 moduleId: 'jobs/addJob',
                 name: 'addJob',
                 nav: true
+            },
+            {
+                route: 'colors',
+                moduleId: 'colors/colors',
+                name: 'colors',
+                nav: true
             }
         ]);
         this.image = "http://aurelia.io/images/aurelia-logo.png";

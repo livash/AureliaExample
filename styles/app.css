@@ -4,6 +4,8 @@
     margin: 15px;
     padding: 15px;
 }
+
+/* font-awesome animation overide */
 .fa-spin {
   -moz-animation-duration: 5s;
   -o-animation-duration: 5s;
@@ -15,4 +17,27 @@
   -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
+}
+.clearfix {
+  overflow: auto;
+}
+
+.color-card {
+    display: block;
+    width: 20%;
+    height: 100px;
+    float: left;
+    margin: 20px;
+}
+
+.color-text {
+    color: #333; /* text color when text is shown*/
+}
+
+.color-text-hide {
+    color: transparent;
+}
+
+.color-text > span {
+    text-transform: uppercase;
 }
