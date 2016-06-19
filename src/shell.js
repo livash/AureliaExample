@@ -38,7 +38,7 @@ export class Shell {
                 nav: true
             }
         ]);
-        this.image = "http://aurelia.io/images/aurelia-logo.png"
+        this.image = "http://aurelia.io/images/aurelia-logo.png";
     }
 }
 

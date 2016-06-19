@@ -7,7 +7,7 @@ export class AddJob {
         this.job = {
             jobType: "Full Time",
             jobSkills: []
-        }
+        };
         this.dataRepository = dataRepository;
         this.dataRepository.getJobTypes().then(jobTypes => {
             this.jobTypes = jobTypes;

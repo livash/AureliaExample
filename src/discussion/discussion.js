@@ -29,7 +29,7 @@ export class Discussion {
             if (confirm(this.warn)) {
                 return true;
             } else {
-                false;
+                return false;
             }
         } else {
             return true;

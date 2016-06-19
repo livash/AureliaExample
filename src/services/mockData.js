@@ -13,4 +13,4 @@ export let eventsData = [
         title: "Babel.js Fundamentals",
         speaker: "John Doe"
     }
-]
+];
