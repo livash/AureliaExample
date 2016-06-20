@@ -24,6 +24,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@1.2.6",
     "font-awesome": "npm:font-awesome@4.6.3",
+    "lodash": "npm:lodash@4.13.1",
     "moment": "npm:moment@2.13.0",
     "toastr": "github:CodeSeven/toastr@2.1.2",
     "github:CodeSeven/toastr@2.1.2": {
@@ -195,6 +196,10 @@ System.config({
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:jquery@3.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:lodash@4.13.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:path-browserify@0.0.0": {
