@@ -4,5 +4,10 @@
         <div repeat.for="[key, val] of mapCollection">
           ${key}: ${val}
         </div>
+        <div>
+            <input type="text" value.bind="person.firstName" />
+            <input type="text" value.bind="person.lastName" />
+        </div>
+        <div textContent.bind="person.fullName"></div>
     </div>
 </template>
