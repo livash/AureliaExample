@@ -9,5 +9,12 @@
             <input type="text" value.bind="person.lastName" />
         </div>
         <div textContent.bind="person.fullName"></div>
+        <div>
+            <require from="common/freshness"></require>
+            <div repeat.for="trade of trades"
+                    css="background: ${trade.time | freshness & signal: 'check-freshness'}">
+                ${trade.amount}
+            </div>
+        </div>
     </div>
 </template>

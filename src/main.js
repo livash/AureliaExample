@@ -3,8 +3,7 @@ import 'bootstrap';
 export function configure(aurelia) {
     aurelia.use
         .standardConfiguration()
-        .developmentLogging()
-        .globalResource('common/capFormat');
+        .developmentLogging();
     //.globalResources('./lib/d3.js');
 
     aurelia.start().then(app => app.setRoot('shell'));

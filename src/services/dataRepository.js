@@ -1,10 +1,16 @@
 import {eventsData} from 'services/mockData';
 import {jobsData, jobTypes} from 'services/jobsData';
 import {processDate} from 'services/helper';
+import {BindingSignaler} from  'aurelia-templating-resources';
+import {inject} from 'aurelia-framework';
 
+@inject(BindingSignaler)
 export class DataRepository {
-    constructor() {
-        //this.events = eventsData;
+    constructor(bindingSignaler) {
+        // setInterval(() => {
+        //     console.log("setting interval to throw a signal");
+        //     bindingSignaler.signal('check-freshness');
+        // }, 1000);
     }
 
     getEvents() {
