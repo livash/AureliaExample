@@ -27,6 +27,5 @@ export class Colors {
 
     shuffleColors() {
         this.colors = lodash.shuffle(this.colors);
-        console.log(this.colors);
     }
 }
