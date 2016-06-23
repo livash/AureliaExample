@@ -1,5 +1,7 @@
-import {bindable} from 'aurelia-framework';
+import {bindable, customElement, containerless} from 'aurelia-framework';
 
+@containerless()
+@customElement('navigation-bar') // use this name for the element instead of 'nav-bar' which is derived from the class name "NavBar"
 export class NavBar {
     @bindable router;
     @bindable image;
