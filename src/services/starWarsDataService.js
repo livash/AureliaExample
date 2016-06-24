@@ -3,27 +3,31 @@ import {HttpClient} from 'aurelia-http-client';
 
 @inject(HttpClient)
 export class StarWarsDataService {
-    constructor(httpClient) {
-        this.httpClient = httpClient;
+    constructor(http) {
+        this.http = http;
     }
 
     getPeople() {
         console.log("Inside getPeople method");
-        let promise = new Promise((resolve, reject) => {
-            this.httpClient.get('http://swapi.co/api/people?format=json')
-                .then((result) => {
-                    console.log(result);
-                    // let data = JSON.parse(result.response);
-                    // console.log({"Hello:": data});
-                    // this.people = data;
-                    resolve(this.people);
-                })
-                .catch(error => {
-                    console.log('Error getting StarWars API data');
-                    console.log(error);
+        let baseUrl = 'http://swapi.co/api/people?format=json'; 
+        var promise1 = new Promise((resolve, reject) => {
+            var promise2 = this.http.get(baseUrl);
+            promise2.then( result => {
+                console.log("Promise 2 is returning a result");
+                console.log(result);
+                    var data = JSON.parse(result.response);
+                    resolve(data.results);
                 });
+                // .then ( result => {
+                //     console.log(result);
+                //     resolve(result);
+                // })
+                // .catch(error => {
+                //     console.log('Error getting StarWars API data');
+                //     console.log(error);
+                // });
         });
         
-        return promise;
+        return promise1;
     }
 }
