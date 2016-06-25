@@ -34,6 +34,13 @@ export class Shell {
                 nav: true
             },
             {
+                route: 'starWars',
+                moduleId: 'starWars/starWarsPeople',
+                name: 'starWars',
+                title: 'Star Wars',
+                nav: true
+            },
+            {
                 route: 'eventDetail/:eventId',
                 moduleId: 'events/eventDetail',
                 name: 'eventDetail'
