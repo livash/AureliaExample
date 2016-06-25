@@ -1,4 +1,4 @@
-import lodash from 'lodash';
+import _ from 'lodash';
 
 export class Colors {
     constructor() {
@@ -20,12 +20,16 @@ export class Colors {
         this.buttonText = "Suffle Colors";
     }
 
+    activate() {
+      this.colors = _.shuffle(this.colors);
+    }
+
     onColorClick(colorIdx) {
         let className = `.color-card-${colorIdx}`;
         $(className).toggleClass('color-text-hide');
     }
 
     shuffleColors() {
-        this.colors = lodash.shuffle(this.colors);
+        this.colors = _.shuffle(this.colors);
     }
 }
